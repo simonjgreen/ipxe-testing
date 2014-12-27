@@ -1,0 +1,6 @@
+#!ipxe
+
+set base-url http://stable.release.core-os.net/amd64-usr/current
+kernel ${base-url}/coreos_production_pxe.vmlinuz sshkey="ssh-rsa AAAAB3NzaC1yc2EAAAABJQAAAIEArXaaM5wglsopsMgnmeSBPIryw+3F4CbqPtPbDANF1VxR4BN9QV0KCCtXXtXe8Yy4IlBA7y8+H298Rv+WDPaJzs2XPjHfoo4PhL4pQQFqxbZWKb+Km3KEHX6ooD3P8Ezq9mGygP3Xifwkp+0LEy0CFjb/uPZXjhDS8Tc7UWNKeT0= simon-green-rsa-key-20120214"
+initrd ${base-url}/coreos_production_pxe_image.cpio.gz
+boot

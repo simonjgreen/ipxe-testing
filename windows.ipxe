@@ -1,0 +1,8 @@
+#!ipxe
+
+cpuid --ext 29 && set arch amd64 || set arch x86
+kernel wimboot
+initrd Windows/${arch}/Boot/BCD		BCD
+initrd Windows/${arch}/Boot/boot.sdi	boot.sdi
+initrd Windows/${arch}/sources/boot.wim	boot.wim
+boot
